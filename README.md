@@ -99,7 +99,6 @@ SSH into the control node and follow the steps below:
 ###############################
 - The files for the playbook are the filebeat and metricbeat .yml file. you obtain these by using the commands:
 curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml) 
-
 curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/metricbeat-config.yml
 
 - You will need to cd into the filebeat and metric beat files in [/etc] folder to edit thier respective.config files. then add the private ip's of the web servers under [webservers] and add [elk] to establish the elk network followed by the elk private ip directly under it that.
