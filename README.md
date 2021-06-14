@@ -9,7 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 [ELK.yml](https://github.com/Enrique1003/CyberSecurity/blob/main/Ansible/ELK.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -23,9 +23,9 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available in addition to restricting in-bound access to the network.
 
-- Load balancers can use the off- loading function distribute malicious traffic caused by DDoS attacks by shiftiing the traffic from the main client server to a public cloud provider.  
+- Load balancers can use the off-loading function to distribute malicious traffic caused by DDoS attacks by shifting the traffic from the main client server to a public cloud provider.  
 
-- An advantage of using a jump box is that it is a secure node that all admins first connect to before executing any task thats secured and monintored.
+- An advantage of using a jump box is that it is a secure node that all admins first connect to before executing any task that's secured and monitored.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the jumpbox and system network.
 - Filebeat watches changes to files on the machine.
@@ -47,7 +47,7 @@ The machines on the internal network are not exposed to the public Internet.
 Only the jump box proviner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - 5061 port, Kibana, 20.81.160.43
 
-Machines within the network can only be accessed by jump box provisioner.
+Machines within the network can only be accessed by the jump box provisioner.
 - My host machine was allowed access to the ELK VM. (host public ip:184.103.201.201)
 
 A summary of the access policies in place can be found in the table below.
@@ -64,7 +64,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 - Efficient in terms of not needing to install any extra software which will allow more space for resources on a server.
 - Free open-source tool.
-- Flexibility allows you to structure and setup the application environment anywhere it is deployed.
+- Flexibility allows you to structure and set up the application environment anywhere it is deployed.
 
 The playbook implements the following tasks:
 - Install docker.io
@@ -86,7 +86,7 @@ We have installed the following Beats on these machines:
 - Microbeats
 
 These Beats allow us to collect the following information from each machine:
-- Filebeats which collects data about the file system, and Metricbeat. Metricbeatvcollects metrics from a system or services running on the server such as uptime or Apache.
+- Filebeats which collects data about the file system, and Metricbeat. Metricbeat Collects metrics from a system or services running on the server such as uptime or Apache.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -101,5 +101,5 @@ SSH into the control node and follow the steps below:
 1. 'curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml)'
 2. 'curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/metricbeat-config.yml'
 
-- You will need to cd into the filebeat and metric beat files in [/etc] folder to edit thier respective.config files. then add the private ip's of the web servers under [webservers] and add [elk] to establish the elk network followed by the elk private ip directly under it that.
+- You will need to cd into the filebeat and metric beat files in [/etc] folder to edit their respective.config files. then add the private ip's of the web servers under [webservers] and add [elk] to establish the elk network followed by the elk private ip directly under it.
 - To check that the ELK server is running, enter http://[Host IP]/app/kibana#/home in your address bar.
