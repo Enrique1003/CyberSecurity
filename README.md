@@ -97,9 +97,9 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to Kibana http://[Host IP]/app/kibana#/home to check that the installation worked as expected.
 
 ###############################
-- The files for the playbook are the filebeat and metricbeat .yml file. you obtain these by using the commands:
-1. curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml) 
-2. curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/metricbeat-config.yml
+- The files for the playbook are the filebeat and metricbeat .yml file. you obtain these by using these 2 commands:
+1. 'curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml)'
+2. 'curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/metricbeat-config.yml'
 
 - You will need to cd into the filebeat and metric beat files in [/etc] folder to edit thier respective.config files. then add the private ip's of the web servers under [webservers] and add [elk] to establish the elk network followed by the elk private ip directly under it that.
 - To check that the ELK server is running, enter http://[Host IP]/app/kibana#/home in your address bar.
