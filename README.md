@@ -72,7 +72,7 @@ The playbook implements the following tasks:
 - Install Docker python module
 - Increase virtual memory
 - Download/launch a docker
-- 
+
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![ELK-docker-ps.PNG](https://github.com/Enrique1003/CyberSecurity/blob/main/Diagrams/ELK-docker-ps.PNG)
